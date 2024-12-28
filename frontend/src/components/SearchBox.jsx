@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { FaSearch } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
@@ -31,7 +32,7 @@ const SearchBox = () => {
         className='mr-sm-2 ml-sm-5'
       ></Form.Control>
       <Button type='submit' variant='outline-success' className='p-2 mx-2'>
-        Search
+        <FaSearch />
       </Button>
     </Form>
   );
