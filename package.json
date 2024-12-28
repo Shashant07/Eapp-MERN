@@ -1,6 +1,7 @@
 {
   "name": "planet1",
   "version": "1.0.0",
+  "type": "module",
   "description": "MERN stack web app",
   "main": "server.js",
   "scripts": {
