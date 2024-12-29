@@ -50,7 +50,11 @@ const RegisterScreen = () => {
 
   return (
     <FormContainer>
-      <h1>Register</h1>
+      {/* <h1 className="card-title text-center my-4">Register</h1> */}
+      <div className="pt-4 pb-2">
+        <h1 className="card-title text-center pb-0 fs-4">Create an Account</h1>
+        <p className="text-center small">Enter your personal details to create account</p>
+      </div>
       <Form onSubmit={submitHandler}>
         <Form.Group className='my-2' controlId='name'>
           <Form.Label>Name</Form.Label>

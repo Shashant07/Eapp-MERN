@@ -8,6 +8,8 @@ import Message from '../components/Message';
 import Paginate from '../components/Paginate';
 import ProductCarousel from '../components/ProductCarousel';
 import Meta from '../components/Meta';
+import Services from '../components/Services';
+import AboutUs from '../components/AboutUs';
 
 const HomeScreen = () => {
   const { pageNumber, keyword } = useParams();
@@ -26,6 +28,11 @@ const HomeScreen = () => {
           Go Back
         </Link>
       )}
+
+      
+      <AboutUs />
+      <Services />
+
       {isLoading ? (
         <Loader />
       ) : error ? (
@@ -35,7 +42,7 @@ const HomeScreen = () => {
       ) : (
         <>
           <Meta />
-          <h1>Latest Products</h1>
+          <h1 className="card-title text-center my-4">Latest Products</h1>
           <Row>
             {data.products.map((product) => (
               <Col key={product._id} sm={12} md={6} lg={4} xl={3}>

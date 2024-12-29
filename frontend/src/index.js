@@ -33,6 +33,11 @@ import RegisterScreen from './screens/RegisterScreen';
 
 import store from './store';
 import { Provider } from 'react-redux';
+import AboutUsScreen from './screens/AboutUsScreen';
+import FAQ from './components/FAQ';
+import ContactUs from './components/ContactUs';
+import TandC from './components/TandC';
+import PrivacyPolicy from './components/PrivacyPolicy';
 // import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 // import { HelmetProvider } from 'react-helmet-async';
 
@@ -42,14 +47,17 @@ const router = createBrowserRouter(
       <Route index={true} path='/' element={<HomeScreen />} />
       <Route path='/search/:keyword' element={<HomeScreen />} />
       <Route path='/page/:pageNumber' element={<HomeScreen />} />
-      <Route
-        path='/search/:keyword/page/:pageNumber'
-        element={<HomeScreen />}
-      />
+      <Route path='/search/:keyword/page/:pageNumber' element={<HomeScreen />} />
       <Route path='/product/:id' element={<ProductScreen />} />
       <Route path='/cart' element={<CartScreen />} />
       <Route path='/login' element={<LoginScreen />} />
       <Route path='/register' element={<RegisterScreen />} />
+      <Route path='/about' element={<AboutUsScreen />} />
+      <Route path='/contact' element={<ContactUs />} />
+      <Route path='/faq' element={<FAQ />} />
+      <Route path='/termsandcondition' element={<TandC />} />
+      <Route path='/privacypolicy' element={<PrivacyPolicy />} />
+
       {/* Registered users */}
       <Route path='' element={<PrivateRoute />}>
         <Route path='/shipping' element={<ShippingScreen />} />
@@ -58,6 +66,7 @@ const router = createBrowserRouter(
         <Route path='/order/:id' element={<OrderScreen />} />
         <Route path='/profile' element={<ProfileScreen />} />
       </Route>
+
       {/* Admin users */}
       <Route path='' element={<AdminRoute />}>
         <Route path='/admin/orderlist' element={<OrderListScreen />} />
